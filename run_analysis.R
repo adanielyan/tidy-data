@@ -56,7 +56,8 @@ if(file.exists("UCI HAR Dataset")) {
   
   # Extract only names we need
   message('Extracting only names we need...')
-  variable_names <- c("Subject", "Activity", as.vector(variable_names[41:46, 2]))
+  columns_to_extract <- grep("mean\\(\\)|std\\(\\)", variable_names[,2])
+  variable_names <- c("Subject", "Activity", as.vector(variable_names[columns_to_extract, 2]))
   message('Done.')
   
   # Merge datasets, subjects, and activities
@@ -67,9 +68,7 @@ if(file.exists("UCI HAR Dataset")) {
   message('Done.')
   
   # Extract only the measurements on the mean and standard deviation.
-  # According to features.txt file the measurements on the mean and standard deviation are in columns 41-46
   message('Extracting only the measurements on the mean and standard deviation...')
-  columns_to_extract <- c(41:46)
   data <- data[, columns_to_extract]
   message('Done.')
   
