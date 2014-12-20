@@ -1,4 +1,5 @@
 library(data.table)
+library(plyr)
 
 #dir_name <- "data"
 output_file_name <- "tidy_data.txt"
