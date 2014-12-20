@@ -91,7 +91,8 @@ if(file.exists("UCI HAR Dataset")) {
   tidy_data <- ddply(data, .(Subject, Activity), numcolwise(mean))
   message('Done.')
   
-  message('Writing tidy_data content to "tidy_data.txt file."')
+  # Writing tidy_data content to "tidy_data.txt" file.
+  message('Writing tidy_data content to "tidy_data.txt" file.')
   write.table(tidy_data, file='tidy_data.txt', row.names=FALSE)
   message('tidy_data.txt file was successfully created!')
   
