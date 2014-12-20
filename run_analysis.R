@@ -11,13 +11,13 @@ file_name <- "dataset.zip"
 ## Uncomment the code below to automate data download and unzip
 #download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", file_name, "curl")
 
-# If file was successfully downloaded extract its content
-if(file.exists(file_name)) {
- message('Unzipping data...')
- unzip(file_name)
- message('Done.')
-}
-# End of data download and unzip
+# # If file was successfully downloaded extract its content
+# if(file.exists(file_name)) {
+#  message('Unzipping data...')
+#  unzip(file_name)
+#  message('Done.')
+# }
+# # End of data download and unzip
 
 # If file was successfully extracted perform the rest of operations
 if(file.exists("UCI HAR Dataset")) {
